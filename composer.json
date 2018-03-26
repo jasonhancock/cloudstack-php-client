@@ -1,0 +1,36 @@
+{
+    "name": "jasonhancock/cloudstack-php-client",
+    "license": "MIT",
+    "type": "project",
+    "keywords": ["cloudstack", "apache", "client", "cloud"],
+    "description": "CloudStack PHP Client",
+    "authors": [
+        {
+            "name": "Jason Hancock",
+            "homepage": "http://geek.jasonhancock.com"
+        }
+    ],
+    "homepage": "https://github.com/jasonhancock/cloudstack-php-client",
+    "require": {
+        "php": "^5.3|^7.0",
+        "ext-hash": "*",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0-dev"
+        }
+    }
+}

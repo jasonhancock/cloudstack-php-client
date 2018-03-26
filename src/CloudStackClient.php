@@ -1,9 +1,7 @@
 <?php
-require_once dirname(__FILE__) . "/BaseCloudStackClient.php";
-require_once dirname(__FILE__) . "/CloudStackClientException.php";
 
 class CloudStackClient extends BaseCloudStackClient {
-    
+
     /**
      * Creates a network offering.
      *
@@ -48,7 +46,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createNetworkOffering', $args);
     }
-    
+
 
     /**
      * Updates a network offering.
@@ -67,7 +65,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateNetworkOffering', $args);
     }
-    
+
 
     /**
      * Deletes a network offering.
@@ -82,7 +80,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteNetworkOffering', $args);
     }
-    
+
 
     /**
      * Lists all available network offerings.
@@ -100,8 +98,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     name - list network offerings by name
      *     networkid - the ID of the network. Pass this in if you want to see the
      *        available network offering that a network can be changed to.
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     sourcenatsupported - true if need to list only netwok offerings where source
      *        nat is supported, false otherwise
      *     specifyipranges - true if need to list only network offerings which support
@@ -119,7 +117,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listNetworkOfferings', $args);
     }
-    
+
 
     /**
      * Creates a network
@@ -164,7 +162,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createNetwork', $args);
     }
-    
+
 
     /**
      * Deletes a network
@@ -179,7 +177,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteNetwork', $args);
     }
-    
+
 
     /**
      * Lists all available networks.
@@ -198,8 +196,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     listall - If set to false, list only resources belonging to the command's
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     physicalnetworkid - list networks by physical network id
      *     projectid - list firewall rules by project
      *     restartrequired - list network offerings by restartRequired option
@@ -215,7 +213,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listNetworks', $args);
     }
-    
+
 
     /**
      * Restarts the network; includes 1) restarting network elements - virtual routers,
@@ -233,7 +231,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('restartNetwork', $args);
     }
-    
+
 
     /**
      * Updates a network
@@ -253,7 +251,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateNetwork', $args);
     }
-    
+
 
     /**
      * Creates a physical network
@@ -281,7 +279,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createPhysicalNetwork', $args);
     }
-    
+
 
     /**
      * Deletes a Physical Network.
@@ -296,7 +294,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deletePhysicalNetwork', $args);
     }
-    
+
 
     /**
      * Lists physical networks
@@ -305,8 +303,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     id - list physical network by id
      *     keyword - List by keyword
      *     name - search by name
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     zoneid - the Zone ID for the physical network
      *     page - Pagination
      */
@@ -314,7 +312,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listPhysicalNetworks', $args);
     }
-    
+
 
     /**
      * Updates a physical network
@@ -333,15 +331,15 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updatePhysicalNetwork', $args);
     }
-    
+
 
     /**
      * Lists all network services provided by CloudStack or for the given Provider.
      *
      * @param array $args An associative array. The following are options for keys:
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     provider - network service provider name
      *     service - network service name to list providers and capabilities of
      *     page - Pagination
@@ -350,7 +348,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listSupportedNetworkServices', $args);
     }
-    
+
 
     /**
      * Adds a network serviceProvider to a physical network
@@ -373,7 +371,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addNetworkServiceProvider', $args);
     }
-    
+
 
     /**
      * Deletes a Network Service Provider.
@@ -388,7 +386,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteNetworkServiceProvider', $args);
     }
-    
+
 
     /**
      * Lists network serviceproviders for a given physical network.
@@ -396,8 +394,8 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     keyword - List by keyword
      *     name - list providers by name
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     physicalnetworkid - the Physical Network ID
      *     state - list providers by state
      *     page - Pagination
@@ -406,7 +404,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listNetworkServiceProviders', $args);
     }
-    
+
 
     /**
      * Updates a network serviceProvider of a physical network
@@ -424,7 +422,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateNetworkServiceProvider', $args);
     }
-    
+
 
     /**
      * Creates a Storage network IP range.
@@ -456,7 +454,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createStorageNetworkIpRange', $args);
     }
-    
+
 
     /**
      * Deletes a storage network IP Range.
@@ -471,7 +469,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteStorageNetworkIpRange', $args);
     }
-    
+
 
     /**
      * List a storage network IP range.
@@ -480,8 +478,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     id - optional parameter. Storaget network IP range uuid, if specicied, using
      *        it to search the range.
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     podid - optional parameter. Pod uuid, if specicied and range uuid is absent,
      *        using it to search the range.
      *     zoneid - optional parameter. Zone uuid, if specicied and both pod uuid and
@@ -492,7 +490,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listStorageNetworkIpRange', $args);
     }
-    
+
 
     /**
      * Update a Storage network IP range, only allowed when no IPs in this range have
@@ -512,7 +510,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateStorageNetworkIpRange', $args);
     }
-    
+
 
     /**
      * Adds a network device of one of the following types: ExternalDhcp,
@@ -528,7 +526,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addNetworkDevice', $args);
     }
-    
+
 
     /**
      * List network devices
@@ -539,15 +537,15 @@ class CloudStackClient extends BaseCloudStackClient {
      *     networkdevicetype - Network device type, now supports ExternalDhcp,
      *        PxeServer, NetscalerMPXLoadBalancer, NetscalerVPXLoadBalancer,
      *        NetscalerSDXLoadBalancer, F5BigIpLoadBalancer, JuniperSRXFirewall
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listNetworkDevice($args=array()) {
 
         return $this->request('listNetworkDevice', $args);
     }
-    
+
 
     /**
      * Deletes network device.
@@ -562,7 +560,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteNetworkDevice', $args);
     }
-    
+
 
     /**
      * lists network that are using a F5 load balancer device
@@ -570,8 +568,8 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     lbdeviceid - f5 load balancer device ID
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listF5LoadBalancerNetworks($args=array()) {
@@ -581,7 +579,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listF5LoadBalancerNetworks', $args);
     }
-    
+
 
     /**
      * lists network that are using SRX firewall device
@@ -589,8 +587,8 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     lbdeviceid - netscaler load balancer device ID
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listSrxFirewallNetworks($args=array()) {
@@ -600,7 +598,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listSrxFirewallNetworks', $args);
     }
-    
+
 
     /**
      * lists network that are using a netscaler load balancer device
@@ -608,8 +606,8 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     lbdeviceid - netscaler load balancer device ID
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listNetscalerLoadBalancerNetworks($args=array()) {
@@ -619,7 +617,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listNetscalerLoadBalancerNetworks', $args);
     }
-    
+
 
     /**
      * Creates a load balancer rule
@@ -661,7 +659,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createLoadBalancerRule', $args);
     }
-    
+
 
     /**
      * Deletes a load balancer rule.
@@ -676,7 +674,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteLoadBalancerRule', $args);
     }
-    
+
 
     /**
      * Removes a virtual machine or a list of virtual machines from a load balancer
@@ -697,7 +695,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('removeFromLoadBalancerRule', $args);
     }
-    
+
 
     /**
      * Assigns virtual machine or a list of virtual machines to a load balancer rule.
@@ -717,7 +715,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('assignToLoadBalancerRule', $args);
     }
-    
+
 
     /**
      * Creates a Load Balancer stickiness policy
@@ -744,7 +742,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createLBStickinessPolicy', $args);
     }
-    
+
 
     /**
      * Deletes a LB stickiness policy.
@@ -759,7 +757,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteLBStickinessPolicy', $args);
     }
-    
+
 
     /**
      * Lists load balancer rules.
@@ -776,8 +774,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
      *     name - the name of the load balancer rule
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     publicipid - the public IP address id of the load balancer rule
      *     virtualmachineid - the ID of the virtual machine of the load balancer rule
@@ -788,7 +786,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listLoadBalancerRules', $args);
     }
-    
+
 
     /**
      * Lists LBStickiness policies.
@@ -796,8 +794,8 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     lbruleid - the ID of the load balancer rule
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listLBStickinessPolicies($args=array()) {
@@ -807,7 +805,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listLBStickinessPolicies', $args);
     }
-    
+
 
     /**
      * List all virtual machine instances that are assigned to a load balancer rule.
@@ -817,8 +815,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     applied - true if listing all virtual machines currently applied to the load
      *        balancer rule; default is true
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listLoadBalancerRuleInstances($args=array()) {
@@ -828,7 +826,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listLoadBalancerRuleInstances', $args);
     }
-    
+
 
     /**
      * Updates load balancer
@@ -846,7 +844,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateLoadBalancerRule', $args);
     }
-    
+
 
     /**
      * Adds a F5 BigIP load balancer device
@@ -877,7 +875,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addF5LoadBalancer', $args);
     }
-    
+
 
     /**
      * configures a F5 load balancer device
@@ -894,7 +892,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('configureF5LoadBalancer', $args);
     }
-    
+
 
     /**
      * delete a F5 load balancer device
@@ -909,7 +907,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteF5LoadBalancer', $args);
     }
-    
+
 
     /**
      * lists F5 load balancer devices
@@ -917,8 +915,8 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     keyword - List by keyword
      *     lbdeviceid - f5 load balancer device ID
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     physicalnetworkid - the Physical Network ID
      *     page - Pagination
      */
@@ -926,7 +924,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listF5LoadBalancers', $args);
     }
-    
+
 
     /**
      * Adds a netscaler load balancer device
@@ -958,7 +956,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addNetscalerLoadBalancer', $args);
     }
-    
+
 
     /**
      * delete a netscaler load balancer device
@@ -973,7 +971,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteNetscalerLoadBalancer', $args);
     }
-    
+
 
     /**
      * configures a netscaler load balancer device
@@ -994,7 +992,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('configureNetscalerLoadBalancer', $args);
     }
-    
+
 
     /**
      * lists netscaler load balancer devices
@@ -1002,8 +1000,8 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     keyword - List by keyword
      *     lbdeviceid - netscaler load balancer device ID
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     physicalnetworkid - the Physical Network ID
      *     page - Pagination
      */
@@ -1011,7 +1009,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listNetscalerLoadBalancers', $args);
     }
-    
+
 
     /**
      * Creates and automatically starts a virtual machine based on a service offering,
@@ -1077,7 +1075,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deployVirtualMachine', $args);
     }
-    
+
 
     /**
      * Destroys a virtual machine. Once destroyed, only the administrator can recover
@@ -1093,7 +1091,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('destroyVirtualMachine', $args);
     }
-    
+
 
     /**
      * Reboots a virtual machine.
@@ -1108,7 +1106,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('rebootVirtualMachine', $args);
     }
-    
+
 
     /**
      * Starts a virtual machine.
@@ -1123,7 +1121,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('startVirtualMachine', $args);
     }
-    
+
 
     /**
      * Stops a virtual machine.
@@ -1139,7 +1137,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('stopVirtualMachine', $args);
     }
-    
+
 
     /**
      * Resets the password for virtual machine. The virtual machine must be in a
@@ -1156,7 +1154,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('resetPasswordForVirtualMachine', $args);
     }
-    
+
 
     /**
      * Changes the service offering for a virtual machine. The virtual machine must be
@@ -1176,7 +1174,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('changeServiceForVirtualMachine', $args);
     }
-    
+
 
     /**
      * Updates parameters of a virtual machine.
@@ -1200,7 +1198,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateVirtualMachine', $args);
     }
-    
+
 
     /**
      * Recovers a virtual machine.
@@ -1215,7 +1213,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('recoverVirtualMachine', $args);
     }
-    
+
 
     /**
      * List the virtual machines owned by the account.
@@ -1241,8 +1239,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *        Default value is false
      *     name - name of the virtual machine
      *     networkid - list by network id
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     podid - the pod ID
      *     projectid - list firewall rules by project
      *     state - state of the virtual machine
@@ -1254,7 +1252,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listVirtualMachines', $args);
     }
-    
+
 
     /**
      * Returns an encrypted password for the VM
@@ -1269,7 +1267,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('getVMPassword', $args);
     }
-    
+
 
     /**
      * Attempts Migration of a VM to a different host or Root volume of the vm to a
@@ -1289,7 +1287,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('migrateVirtualMachine', $args);
     }
-    
+
 
     /**
      * Move a user VM to another user under same domain.
@@ -1317,7 +1315,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('assignVirtualMachine', $args);
     }
-    
+
 
     /**
      * Restore a VM to original template or specific snapshot
@@ -1332,7 +1330,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('restoreVirtualMachine', $args);
     }
-    
+
 
     /**
      * Adds traffic type to a physical network
@@ -1358,7 +1356,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addTrafficType', $args);
     }
-    
+
 
     /**
      * Deletes traffic type of a physical network
@@ -1373,7 +1371,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteTrafficType', $args);
     }
-    
+
 
     /**
      * Lists traffic types of a given physical network.
@@ -1381,8 +1379,8 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     physicalnetworkid - the Physical Network ID
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listTrafficTypes($args=array()) {
@@ -1392,7 +1390,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listTrafficTypes', $args);
     }
-    
+
 
     /**
      * Updates traffic type of a physical network
@@ -1413,7 +1411,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateTrafficType', $args);
     }
-    
+
 
     /**
      * Lists implementors of implementor of a network traffic type or implementors of
@@ -1421,8 +1419,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *
      * @param array $args An associative array. The following are options for keys:
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     traffictype - Optional. The network traffic type, if specified, return its
      *        implementor. Otherwise, return all traffic types with their implementor
      *     page - Pagination
@@ -1431,7 +1429,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listTrafficTypeImplementors', $args);
     }
-    
+
 
     /**
      * Generates usage records. This will generate records only if there any records to
@@ -1454,7 +1452,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('generateUsageRecords', $args);
     }
-    
+
 
     /**
      * Lists usage records for accounts
@@ -1468,8 +1466,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     accountid - List usage records for the specified account
      *     domainid - List usage records for the specified domain.
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - List usage records for specified project
      *     type - List usage records for the specified usage type
      *     page - Pagination
@@ -1484,7 +1482,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listUsageRecords', $args);
     }
-    
+
 
     /**
      * List Usage Types
@@ -1496,7 +1494,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listUsageTypes', $args);
     }
-    
+
 
     /**
      * Adds Traffic Monitor Host for Direct Network Usage
@@ -1515,7 +1513,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addTrafficMonitor', $args);
     }
-    
+
 
     /**
      * Deletes an traffic monitor host.
@@ -1530,7 +1528,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteTrafficMonitor', $args);
     }
-    
+
 
     /**
      * List traffic monitor Hosts.
@@ -1538,8 +1536,8 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     zoneid - zone Id
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listTrafficMonitors($args=array()) {
@@ -1549,7 +1547,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listTrafficMonitors', $args);
     }
-    
+
 
     /**
      * Attaches a disk volume to a virtual machine.
@@ -1572,7 +1570,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('attachVolume', $args);
     }
-    
+
 
     /**
      * Detaches a disk volume from a virtual machine.
@@ -1588,7 +1586,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('detachVolume', $args);
     }
-    
+
 
     /**
      * Creates a disk volume from a disk offering. This disk volume must still be
@@ -1617,7 +1615,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createVolume', $args);
     }
-    
+
 
     /**
      * Deletes a detached disk volume.
@@ -1632,7 +1630,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteVolume', $args);
     }
-    
+
 
     /**
      * Lists all volumes.
@@ -1650,8 +1648,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
      *     name - the name of the disk volume
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     podid - the pod id the disk volume belongs to
      *     projectid - list firewall rules by project
      *     type - the type of disk volume
@@ -1663,7 +1661,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listVolumes', $args);
     }
-    
+
 
     /**
      * Extracts volume
@@ -1687,7 +1685,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('extractVolume', $args);
     }
-    
+
 
     /**
      * Migrate volume
@@ -1706,7 +1704,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('migrateVolume', $args);
     }
-    
+
 
     /**
      * Create a volume
@@ -1747,7 +1745,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createVolumeOnFiler', $args);
     }
-    
+
 
     /**
      * Destroy a Volume
@@ -1770,7 +1768,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('destroyVolumeOnFiler', $args);
     }
-    
+
 
     /**
      * List Volumes
@@ -1786,7 +1784,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listVolumesOnFiler', $args);
     }
-    
+
 
     /**
      * Creates a user for an account that already exists
@@ -1828,7 +1826,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createUser', $args);
     }
-    
+
 
     /**
      * Creates a user for an account
@@ -1843,7 +1841,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteUser', $args);
     }
-    
+
 
     /**
      * Updates a user account
@@ -1869,7 +1867,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateUser', $args);
     }
-    
+
 
     /**
      * Lists user accounts
@@ -1887,8 +1885,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     listall - If set to false, list only resources belonging to the command's
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     state - List users by state of the user account.
      *     username - List user by the username
      *     page - Pagination
@@ -1897,7 +1895,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listUsers', $args);
     }
-    
+
 
     /**
      * Disables a user account
@@ -1912,7 +1910,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('disableUser', $args);
     }
-    
+
 
     /**
      * Enables a user account
@@ -1927,7 +1925,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('enableUser', $args);
     }
-    
+
 
     /**
      * This command allows a user to register for the developer API, returning a secret
@@ -1947,7 +1945,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('registerUserKeys', $args);
     }
-    
+
 
     /**
      * Adds vpn users
@@ -1970,7 +1968,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addVpnUser', $args);
     }
-    
+
 
     /**
      * Removes vpn user
@@ -1989,7 +1987,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('removeVpnUser', $args);
     }
-    
+
 
     /**
      * Lists vpn users
@@ -2005,8 +2003,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     listall - If set to false, list only resources belonging to the command's
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     username - the username of the vpn user.
      *     page - Pagination
@@ -2015,7 +2013,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listVpnUsers', $args);
     }
-    
+
 
     /**
      * Creates a template of a virtual machine. The virtual machine must be in a
@@ -2059,7 +2057,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createTemplate', $args);
     }
-    
+
 
     /**
      * Registers an existing template into the Cloud.com cloud.
@@ -2120,7 +2118,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('registerTemplate', $args);
     }
-    
+
 
     /**
      * Updates attributes of a template.
@@ -2143,7 +2141,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateTemplate', $args);
     }
-    
+
 
     /**
      * Copies a template from one zone to another.
@@ -2166,7 +2164,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('copyTemplate', $args);
     }
-    
+
 
     /**
      * Deletes a template from the system. All virtual machines using the deleted
@@ -2183,7 +2181,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteTemplate', $args);
     }
-    
+
 
     /**
      * List all public, private, and privileged templates.
@@ -2207,8 +2205,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
      *     name - the template name
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     zoneid - list templates by zoneId
      *     page - Pagination
@@ -2220,7 +2218,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listTemplates', $args);
     }
-    
+
 
     /**
      * Updates a template visibility permissions. A public template is visible to all
@@ -2248,7 +2246,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateTemplatePermissions', $args);
     }
-    
+
 
     /**
      * List template visibility and all accounts that have permissions to view this
@@ -2265,7 +2263,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listTemplatePermissions', $args);
     }
-    
+
 
     /**
      * Extracts a template
@@ -2286,7 +2284,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('extractTemplate', $args);
     }
-    
+
 
     /**
      * load template into primary storage
@@ -2306,7 +2304,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('prepareTemplate', $args);
     }
-    
+
 
     /**
      * Attaches an ISO to a virtual machine.
@@ -2325,7 +2323,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('attachIso', $args);
     }
-    
+
 
     /**
      * Detaches any ISO file (if any) currently attached to a virtual machine.
@@ -2340,7 +2338,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('detachIso', $args);
     }
-    
+
 
     /**
      * Lists all available ISO files.
@@ -2368,8 +2366,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
      *     name - list all isos by name
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     zoneid - the ID of the zone
      *     page - Pagination
@@ -2378,7 +2376,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listIsos', $args);
     }
-    
+
 
     /**
      * Registers an existing ISO into the Cloud.com Cloud.
@@ -2420,7 +2418,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('registerIso', $args);
     }
-    
+
 
     /**
      * Updates an ISO file.
@@ -2443,7 +2441,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateIso', $args);
     }
-    
+
 
     /**
      * Deletes an ISO file.
@@ -2460,7 +2458,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteIso', $args);
     }
-    
+
 
     /**
      * Copies a template from one zone to another.
@@ -2483,7 +2481,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('copyIso', $args);
     }
-    
+
 
     /**
      * Updates iso permissions
@@ -2507,7 +2505,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateIsoPermissions', $args);
     }
-    
+
 
     /**
      * List template visibility and all accounts that have permissions to view this
@@ -2524,7 +2522,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listIsoPermissions', $args);
     }
-    
+
 
     /**
      * Extracts an ISO
@@ -2545,7 +2543,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('extractIso', $args);
     }
-    
+
 
     /**
      * Lists all port forwarding rules for an IP address.
@@ -2562,8 +2560,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     listall - If set to false, list only resources belonging to the command's
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     page - Pagination
      */
@@ -2571,7 +2569,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listPortForwardingRules', $args);
     }
-    
+
 
     /**
      * Creates a port forwarding rule
@@ -2609,7 +2607,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createPortForwardingRule', $args);
     }
-    
+
 
     /**
      * Deletes a port forwarding rule
@@ -2624,7 +2622,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deletePortForwardingRule', $args);
     }
-    
+
 
     /**
      * Creates a firewall rule for a given ip address
@@ -2647,7 +2645,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createFirewallRule', $args);
     }
-    
+
 
     /**
      * Deletes a firewall rule
@@ -2662,7 +2660,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteFirewallRule', $args);
     }
-    
+
 
     /**
      * Lists all firewall rules for an IP address.
@@ -2679,8 +2677,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     listall - If set to false, list only resources belonging to the command's
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     page - Pagination
      */
@@ -2688,7 +2686,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listFirewallRules', $args);
     }
-    
+
 
     /**
      * Adds a SRX firewall device
@@ -2719,7 +2717,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addSrxFirewall', $args);
     }
-    
+
 
     /**
      * delete a SRX firewall device
@@ -2734,7 +2732,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteSrxFirewall', $args);
     }
-    
+
 
     /**
      * Configures a SRX firewall device
@@ -2751,7 +2749,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('configureSrxFirewall', $args);
     }
-    
+
 
     /**
      * lists SRX firewall devices in a physical network
@@ -2759,8 +2757,8 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     fwdeviceid - SRX firewall device ID
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     physicalnetworkid - the Physical Network ID
      *     page - Pagination
      */
@@ -2768,7 +2766,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listSrxFirewalls', $args);
     }
-    
+
 
     /**
      * Starts a router.
@@ -2783,7 +2781,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('startRouter', $args);
     }
-    
+
 
     /**
      * Starts a router.
@@ -2798,7 +2796,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('rebootRouter', $args);
     }
-    
+
 
     /**
      * Stops a router.
@@ -2814,7 +2812,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('stopRouter', $args);
     }
-    
+
 
     /**
      * Destroys a router.
@@ -2829,7 +2827,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('destroyRouter', $args);
     }
-    
+
 
     /**
      * Upgrades domain router to a new service offering
@@ -2848,7 +2846,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('changeServiceForRouter', $args);
     }
-    
+
 
     /**
      * List routers.
@@ -2867,8 +2865,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *        Default value is false
      *     name - the name of the router
      *     networkid - list by network id
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     podid - the Pod ID of the router
      *     projectid - list firewall rules by project
      *     state - the state of the router
@@ -2879,7 +2877,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listRouters', $args);
     }
-    
+
 
     /**
      * Create a virtual router element.
@@ -2894,7 +2892,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createVirtualRouterElement', $args);
     }
-    
+
 
     /**
      * Configures a virtual router element.
@@ -2913,7 +2911,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('configureVirtualRouterElement', $args);
     }
-    
+
 
     /**
      * Lists all available virtual router elements.
@@ -2923,15 +2921,15 @@ class CloudStackClient extends BaseCloudStackClient {
      *     id - list virtual router elements by id
      *     keyword - List by keyword
      *     nspid - list virtual router elements by network service provider id
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listVirtualRouterElements($args=array()) {
 
         return $this->request('listVirtualRouterElements', $args);
     }
-    
+
 
     /**
      * Creates a project
@@ -2952,7 +2950,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createProject', $args);
     }
-    
+
 
     /**
      * Deletes a project
@@ -2967,7 +2965,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteProject', $args);
     }
-    
+
 
     /**
      * Updates a project
@@ -2984,7 +2982,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateProject', $args);
     }
-    
+
 
     /**
      * Activates a project
@@ -2999,7 +2997,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('activateProject', $args);
     }
-    
+
 
     /**
      * Suspends a project
@@ -3014,7 +3012,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('suspendProject', $args);
     }
-    
+
 
     /**
      * Lists projects and provides detailed information for listed projects
@@ -3032,8 +3030,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
      *     name - list projects by name
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     state - list projects by state
      *     page - Pagination
      */
@@ -3041,7 +3039,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listProjects', $args);
     }
-    
+
 
     /**
      * Lists projects and provides detailed information for listed projects
@@ -3059,8 +3057,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     listall - If set to false, list only resources belonging to the command's
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list by project id
      *     state - list invitations by state
      *     page - Pagination
@@ -3069,7 +3067,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listProjectInvitations', $args);
     }
-    
+
 
     /**
      * Accepts or declines project invitation
@@ -3088,7 +3086,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateProjectInvitation', $args);
     }
-    
+
 
     /**
      * Accepts or declines project invitation
@@ -3103,7 +3101,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteProjectInvitation', $args);
     }
-    
+
 
     /**
      * Adds a new host.
@@ -3140,7 +3138,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addHost', $args);
     }
-    
+
 
     /**
      * Reconnects a host.
@@ -3155,7 +3153,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('reconnectHost', $args);
     }
-    
+
 
     /**
      * Updates a host.
@@ -3175,7 +3173,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateHost', $args);
     }
-    
+
 
     /**
      * Deletes a host.
@@ -3194,7 +3192,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteHost', $args);
     }
-    
+
 
     /**
      * Prepares a host for maintenance.
@@ -3209,7 +3207,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('prepareHostForMaintenance', $args);
     }
-    
+
 
     /**
      * Cancels host maintenance.
@@ -3224,7 +3222,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('cancelHostMaintenance', $args);
     }
-    
+
 
     /**
      * Lists hosts.
@@ -3236,8 +3234,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     id - the id of the host
      *     keyword - List by keyword
      *     name - the name of the host
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     podid - the Pod ID for the host
      *     resourcestate - list hosts by resource state. Resource state represents
      *        current state determined by admin of host, valule can be one of [Enabled,
@@ -3254,7 +3252,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listHosts', $args);
     }
-    
+
 
     /**
      * Adds secondary storage.
@@ -3270,7 +3268,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addSecondaryStorage', $args);
     }
-    
+
 
     /**
      * Update password of a host/pool on management server.
@@ -3291,7 +3289,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateHostPassword', $args);
     }
-    
+
 
     /**
      * Creates an account
@@ -3336,7 +3334,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createAccount', $args);
     }
-    
+
 
     /**
      * Deletes a account, and all users associated with this account
@@ -3351,7 +3349,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteAccount', $args);
     }
-    
+
 
     /**
      * Updates account information for the authenticated user
@@ -3372,7 +3370,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateAccount', $args);
     }
-    
+
 
     /**
      * Disables an account
@@ -3390,7 +3388,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('disableAccount', $args);
     }
-    
+
 
     /**
      * Enables an account
@@ -3404,7 +3402,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('enableAccount', $args);
     }
-    
+
 
     /**
      * Lists accounts and provides detailed account information for listed accounts
@@ -3423,8 +3421,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
      *     name - list account by account name
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     state - list accounts by state. Valid states are enabled, disabled, and
      *        locked.
      *     page - Pagination
@@ -3433,7 +3431,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listAccounts', $args);
     }
-    
+
 
     /**
      * Adds acoount to a project
@@ -3450,7 +3448,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addAccountToProject', $args);
     }
-    
+
 
     /**
      * Deletes account from the project
@@ -3469,7 +3467,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteAccountFromProject', $args);
     }
-    
+
 
     /**
      * Lists project's accounts
@@ -3478,8 +3476,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     projectid - id of the project
      *     account - list accounts of the project by account name
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     role - list accounts of the project by role
      *     page - Pagination
      */
@@ -3490,7 +3488,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listProjectAccounts', $args);
     }
-    
+
 
     /**
      * Lists storage pools.
@@ -3501,8 +3499,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     ipaddress - the IP address for the storage pool
      *     keyword - List by keyword
      *     name - the name of the storage pool
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     path - the storage pool path
      *     podid - the Pod ID for the storage pool
      *     zoneid - the Zone ID for the storage pool
@@ -3512,7 +3510,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listStoragePools', $args);
     }
-    
+
 
     /**
      * Creates a storage pool.
@@ -3539,7 +3537,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createStoragePool', $args);
     }
-    
+
 
     /**
      * Updates a storage pool.
@@ -3555,7 +3553,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateStoragePool', $args);
     }
-    
+
 
     /**
      * Deletes a storage pool.
@@ -3570,7 +3568,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteStoragePool', $args);
     }
-    
+
 
     /**
      * Create a pool
@@ -3589,7 +3587,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createPool', $args);
     }
-    
+
 
     /**
      * Delete a pool
@@ -3604,7 +3602,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deletePool', $args);
     }
-    
+
 
     /**
      * Modify pool
@@ -3623,7 +3621,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('modifyPool', $args);
     }
-    
+
 
     /**
      * List Pool
@@ -3635,7 +3633,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listPools', $args);
     }
-    
+
 
     /**
      * Creates a security group
@@ -3656,7 +3654,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createSecurityGroup', $args);
     }
-    
+
 
     /**
      * Deletes security group
@@ -3673,7 +3671,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteSecurityGroup', $args);
     }
-    
+
 
     /**
      * Authorizes a particular ingress rule for this security group
@@ -3700,7 +3698,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('authorizeSecurityGroupIngress', $args);
     }
-    
+
 
     /**
      * Deletes a particular ingress rule from this security group
@@ -3715,7 +3713,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('revokeSecurityGroupIngress', $args);
     }
-    
+
 
     /**
      * Authorizes a particular egress rule for this security group
@@ -3742,7 +3740,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('authorizeSecurityGroupEgress', $args);
     }
-    
+
 
     /**
      * Deletes a particular egress rule from this security group
@@ -3757,7 +3755,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('revokeSecurityGroupEgress', $args);
     }
-    
+
 
     /**
      * Lists security groups
@@ -3773,8 +3771,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     listall - If set to false, list only resources belonging to the command's
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     securitygroupname - lists security groups by name
      *     virtualmachineid - lists security groups by virtual machine id
@@ -3784,7 +3782,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listSecurityGroups', $args);
     }
-    
+
 
     /**
      * Starts a system virtual machine.
@@ -3799,7 +3797,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('startSystemVm', $args);
     }
-    
+
 
     /**
      * Reboots a system VM.
@@ -3814,7 +3812,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('rebootSystemVm', $args);
     }
-    
+
 
     /**
      * Stops a system VM.
@@ -3830,7 +3828,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('stopSystemVm', $args);
     }
-    
+
 
     /**
      * Destroyes a system virtual machine.
@@ -3845,7 +3843,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('destroySystemVm', $args);
     }
-    
+
 
     /**
      * List system virtual machines.
@@ -3855,8 +3853,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     id - the ID of the system VM
      *     keyword - List by keyword
      *     name - the name of the system VM
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     podid - the Pod ID of the system VM
      *     state - the state of the system VM
      *     systemvmtype - the system VM type. Possible types are "consoleproxy" and
@@ -3868,7 +3866,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listSystemVms', $args);
     }
-    
+
 
     /**
      * Attempts Migration of a system virtual machine to the host specified.
@@ -3887,7 +3885,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('migrateSystemVm', $args);
     }
-    
+
 
     /**
      * Creates an instant snapshot of a volume.
@@ -3908,7 +3906,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createSnapshot', $args);
     }
-    
+
 
     /**
      * Lists all available snapshots for the account.
@@ -3926,8 +3924,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
      *     name - lists snapshot by snapshot name
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     snapshottype - valid values are MANUAL or RECURRING.
      *     volumeid - the ID of the disk volume
@@ -3937,7 +3935,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listSnapshots', $args);
     }
-    
+
 
     /**
      * Deletes a snapshot of a disk volume.
@@ -3952,7 +3950,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteSnapshot', $args);
     }
-    
+
 
     /**
      * Creates a snapshot policy for the account.
@@ -3986,7 +3984,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createSnapshotPolicy', $args);
     }
-    
+
 
     /**
      * Deletes snapshot policies for the account.
@@ -3999,7 +3997,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteSnapshotPolicies', $args);
     }
-    
+
 
     /**
      * Lists snapshot policies.
@@ -4007,8 +4005,8 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     volumeid - the ID of the disk volume
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listSnapshotPolicies($args=array()) {
@@ -4018,7 +4016,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listSnapshotPolicies', $args);
     }
-    
+
 
     /**
      * Create a LUN from a pool
@@ -4037,7 +4035,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createLunOnFiler', $args);
     }
-    
+
 
     /**
      * Destroy a LUN
@@ -4052,7 +4050,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('destroyLunOnFiler', $args);
     }
-    
+
 
     /**
      * List LUN
@@ -4068,7 +4066,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listLunsOnFiler', $args);
     }
-    
+
 
     /**
      * Associate a LUN with a guest IQN
@@ -4087,7 +4085,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('associateLun', $args);
     }
-    
+
 
     /**
      * Dissociate a LUN
@@ -4106,7 +4104,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('dissociateLun', $args);
     }
-    
+
 
     /**
      * Enables static nat for given ip address
@@ -4127,7 +4125,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('enableStaticNat', $args);
     }
-    
+
 
     /**
      * Creates an ip forwarding rule
@@ -4156,7 +4154,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createIpForwardingRule', $args);
     }
-    
+
 
     /**
      * Deletes an ip forwarding rule
@@ -4171,7 +4169,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteIpForwardingRule', $args);
     }
-    
+
 
     /**
      * List the ip forwarding rules
@@ -4188,8 +4186,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     listall - If set to false, list only resources belonging to the command's
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     virtualmachineid - Lists all rules applied to the specified Vm.
      *     page - Pagination
@@ -4198,7 +4196,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listIpForwardingRules', $args);
     }
-    
+
 
     /**
      * Disables static rule for given ip address
@@ -4214,7 +4212,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('disableStaticNat', $args);
     }
-    
+
 
     /**
      * Creates a domain
@@ -4232,7 +4230,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createDomain', $args);
     }
-    
+
 
     /**
      * Updates a domain with a new name
@@ -4250,7 +4248,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateDomain', $args);
     }
-    
+
 
     /**
      * Deletes a specified domain
@@ -4267,7 +4265,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteDomain', $args);
     }
-    
+
 
     /**
      * Lists domains and provides detailed information for listed domains
@@ -4280,15 +4278,15 @@ class CloudStackClient extends BaseCloudStackClient {
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
      *     name - List domain by domain name.
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listDomains($args=array()) {
 
         return $this->request('listDomains', $args);
     }
-    
+
 
     /**
      * Lists all children domains belonging to a specified domain
@@ -4302,15 +4300,15 @@ class CloudStackClient extends BaseCloudStackClient {
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
      *     name - list children domains by name
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listDomainChildren($args=array()) {
 
         return $this->request('listDomainChildren', $args);
     }
-    
+
 
     /**
      * Creates a Zone.
@@ -4346,7 +4344,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createZone', $args);
     }
-    
+
 
     /**
      * Updates a Zone.
@@ -4375,7 +4373,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateZone', $args);
     }
-    
+
 
     /**
      * Deletes a Zone.
@@ -4390,7 +4388,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteZone', $args);
     }
-    
+
 
     /**
      * Lists zones
@@ -4402,8 +4400,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     domainid - the ID of the domain associated with the zone
      *     id - the ID of the zone
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     showcapacities - flag to display the capacity of the zones
      *     page - Pagination
      */
@@ -4411,7 +4409,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listZones', $args);
     }
-    
+
 
     /**
      * Creates a vm group
@@ -4430,7 +4428,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createInstanceGroup', $args);
     }
-    
+
 
     /**
      * Deletes a vm group
@@ -4445,7 +4443,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteInstanceGroup', $args);
     }
-    
+
 
     /**
      * Updates a vm group
@@ -4461,7 +4459,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateInstanceGroup', $args);
     }
-    
+
 
     /**
      * Lists vm groups
@@ -4478,8 +4476,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
      *     name - list instance groups by name
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     page - Pagination
      */
@@ -4487,7 +4485,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listInstanceGroups', $args);
     }
-    
+
 
     /**
      * Creates a service offering.
@@ -4531,7 +4529,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createServiceOffering', $args);
     }
-    
+
 
     /**
      * Deletes a service offering.
@@ -4546,7 +4544,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteServiceOffering', $args);
     }
-    
+
 
     /**
      * Updates a service offering.
@@ -4564,7 +4562,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateServiceOffering', $args);
     }
-    
+
 
     /**
      * Lists all available service offerings.
@@ -4575,8 +4573,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     issystem - is this a system vm offering
      *     keyword - List by keyword
      *     name - name of the service offering
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     systemvmtype - the system VM type. Possible types are "consoleproxy",
      *        "secondarystoragevm" or "domainrouter".
      *     virtualmachineid - the ID of the virtual machine. Pass this in if you want
@@ -4587,7 +4585,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listServiceOfferings', $args);
     }
-    
+
 
     /**
      * Creates a new Pod.
@@ -4621,7 +4619,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createPod', $args);
     }
-    
+
 
     /**
      * Updates a Pod.
@@ -4643,7 +4641,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updatePod', $args);
     }
-    
+
 
     /**
      * Deletes a Pod.
@@ -4658,7 +4656,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deletePod', $args);
     }
-    
+
 
     /**
      * Lists all Pods.
@@ -4668,8 +4666,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     id - list Pods by ID
      *     keyword - List by keyword
      *     name - list Pods by name
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     showcapacities - flag to display the capacity of the pods
      *     zoneid - list Pods by Zone ID
      *     page - Pagination
@@ -4678,7 +4676,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listPods', $args);
     }
-    
+
 
     /**
      * Creates a disk offering.
@@ -4701,7 +4699,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createDiskOffering', $args);
     }
-    
+
 
     /**
      * Updates a disk offering.
@@ -4720,7 +4718,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateDiskOffering', $args);
     }
-    
+
 
     /**
      * Updates a disk offering.
@@ -4735,7 +4733,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteDiskOffering', $args);
     }
-    
+
 
     /**
      * Lists all available disk offerings.
@@ -4745,15 +4743,15 @@ class CloudStackClient extends BaseCloudStackClient {
      *     id - ID of the disk offering
      *     keyword - List by keyword
      *     name - name of the disk offering
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listDiskOfferings($args=array()) {
 
         return $this->request('listDiskOfferings', $args);
     }
-    
+
 
     /**
      * Adds a new cluster
@@ -4787,7 +4785,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addCluster', $args);
     }
-    
+
 
     /**
      * Deletes a cluster.
@@ -4802,7 +4800,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteCluster', $args);
     }
-    
+
 
     /**
      * Updates an existing cluster
@@ -4823,7 +4821,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateCluster', $args);
     }
-    
+
 
     /**
      * Lists clusters.
@@ -4836,8 +4834,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     keyword - List by keyword
      *     managedstate - whether this cluster is managed by cloudstack
      *     name - lists clusters by the cluster name
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     podid - lists clusters by Pod ID
      *     showcapacities - flag to display the capacity of the clusters
      *     zoneid - lists clusters by Zone ID
@@ -4847,7 +4845,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listClusters', $args);
     }
-    
+
 
     /**
      * Creates a l2tp/ipsec remote access vpn
@@ -4870,7 +4868,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createRemoteAccessVpn', $args);
     }
-    
+
 
     /**
      * Destroys a l2tp/ipsec remote access vpn
@@ -4885,7 +4883,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteRemoteAccessVpn', $args);
     }
-    
+
 
     /**
      * Lists remote access vpns
@@ -4901,8 +4899,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     listall - If set to false, list only resources belonging to the command's
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     page - Pagination
      */
@@ -4913,7 +4911,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listRemoteAccessVpns', $args);
     }
-    
+
 
     /**
      * Creates a VLAN IP range.
@@ -4943,7 +4941,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createVlanIpRange', $args);
     }
-    
+
 
     /**
      * Creates a VLAN IP range.
@@ -4958,7 +4956,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteVlanIpRange', $args);
     }
-    
+
 
     /**
      * Lists all VLAN IP ranges.
@@ -4973,8 +4971,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     id - the ID of the VLAN IP range
      *     keyword - List by keyword
      *     networkid - network id of the VLAN IP range
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     physicalnetworkid - physical network id of the VLAN IP range
      *     podid - the Pod ID of the VLAN IP range
      *     projectid - project who will own the VLAN
@@ -4986,7 +4984,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listVlanIpRanges', $args);
     }
-    
+
 
     /**
      * Create a new keypair and returns the private key
@@ -5005,7 +5003,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('createSSHKeyPair', $args);
     }
-    
+
 
     /**
      * Deletes a keypair by name
@@ -5024,7 +5022,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteSSHKeyPair', $args);
     }
-    
+
 
     /**
      * List registered keypairs
@@ -5041,8 +5039,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
      *     name - A key pair name to look for
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     page - Pagination
      */
@@ -5050,7 +5048,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listSSHKeyPairs', $args);
     }
-    
+
 
     /**
      * Updates resource limits for an account or domain.
@@ -5076,7 +5074,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateResourceLimit', $args);
     }
-    
+
 
     /**
      * Recalculate and update resource count for an account or domain.
@@ -5102,7 +5100,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateResourceCount', $args);
     }
-    
+
 
     /**
      * Lists resource limits.
@@ -5118,8 +5116,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     listall - If set to false, list only resources belonging to the command's
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     resourcetype - Type of resource to update. Values are 0, 1, 2, 3, and 4. 0 -
      *        Instance. Number of instances a user can create. 1 - IP. Number of public IP
@@ -5132,7 +5130,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listResourceLimits', $args);
     }
-    
+
 
     /**
      * List hypervisors
@@ -5145,7 +5143,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listHypervisors', $args);
     }
-    
+
 
     /**
      * Updates a hypervisor capabilities.
@@ -5160,7 +5158,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateHypervisorCapabilities', $args);
     }
-    
+
 
     /**
      * Lists all hypervisor capabilities.
@@ -5169,15 +5167,15 @@ class CloudStackClient extends BaseCloudStackClient {
      *     hypervisor - the hypervisor for which to restrict the search
      *     id - ID of the hypervisor capability
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listHypervisorCapabilities($args=array()) {
 
         return $this->request('listHypervisorCapabilities', $args);
     }
-    
+
 
     /**
      * Adds F5 external load balancer appliance.
@@ -5204,7 +5202,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addExternalLoadBalancer', $args);
     }
-    
+
 
     /**
      * Deletes a F5 external load balancer appliance added in a zone.
@@ -5219,15 +5217,15 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteExternalLoadBalancer', $args);
     }
-    
+
 
     /**
      * Lists F5 external load balancer appliances added in a zone.
      *
      * @param array $args An associative array. The following are options for keys:
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     zoneid - zone Id
      *     page - Pagination
      */
@@ -5235,7 +5233,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listExternalLoadBalancers', $args);
     }
-    
+
 
     /**
      * Adds an external firewall appliance
@@ -5262,7 +5260,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addExternalFirewall', $args);
     }
-    
+
 
     /**
      * Deletes an external firewall appliance.
@@ -5277,7 +5275,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('deleteExternalFirewall', $args);
     }
-    
+
 
     /**
      * List external firewall appliances.
@@ -5285,8 +5283,8 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     zoneid - zone Id
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listExternalFirewalls($args=array()) {
@@ -5296,7 +5294,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listExternalFirewalls', $args);
     }
-    
+
 
     /**
      * Updates a configuration.
@@ -5312,7 +5310,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('updateConfiguration', $args);
     }
-    
+
 
     /**
      * Lists all configurations.
@@ -5321,15 +5319,15 @@ class CloudStackClient extends BaseCloudStackClient {
      *     category - lists configurations by category
      *     keyword - List by keyword
      *     name - lists configuration by name
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listConfigurations($args=array()) {
 
         return $this->request('listConfigurations', $args);
     }
-    
+
 
     /**
      * Lists capabilities
@@ -5341,7 +5339,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listCapabilities', $args);
     }
-    
+
 
     /**
      * Acquires and associates a public IP to an account.
@@ -5358,7 +5356,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('associateIpAddress', $args);
     }
-    
+
 
     /**
      * Disassociates an ip address from the account.
@@ -5373,7 +5371,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('disassociateIpAddress', $args);
     }
-    
+
 
     /**
      * Lists all public ip addresses
@@ -5397,8 +5395,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     listall - If set to false, list only resources belonging to the command's
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     physicalnetworkid - lists all public IP addresses by physical network id
      *     projectid - list firewall rules by project
      *     vlanid - lists all public IP addresses by VLAN ID
@@ -5409,7 +5407,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listPublicIpAddresses', $args);
     }
-    
+
 
     /**
      * Adds Swift.
@@ -5427,7 +5425,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('addSwift', $args);
     }
-    
+
 
     /**
      * List Swift.
@@ -5435,15 +5433,15 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     id - the id of the swift
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listSwifts($args=array()) {
 
         return $this->request('listSwifts', $args);
     }
-    
+
 
     /**
      * Puts storage pool into maintenance state
@@ -5458,7 +5456,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('enableStorageMaintenance', $args);
     }
-    
+
 
     /**
      * Cancels maintenance for primary storage
@@ -5473,7 +5471,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('cancelStorageMaintenance', $args);
     }
-    
+
 
     /**
      * Lists all supported OS types for this cloud.
@@ -5482,15 +5480,15 @@ class CloudStackClient extends BaseCloudStackClient {
      *     id - list by Os type Id
      *     keyword - List by keyword
      *     oscategoryid - list by Os Category id
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listOsTypes($args=array()) {
 
         return $this->request('listOsTypes', $args);
     }
-    
+
 
     /**
      * Lists all supported OS categories for this cloud.
@@ -5498,15 +5496,15 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     id - list Os category by id
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     page - Pagination
      */
     public function listOsCategories($args=array()) {
 
         return $this->request('listOsCategories', $args);
     }
-    
+
 
     /**
      * A command to list events.
@@ -5527,8 +5525,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     listall - If set to false, list only resources belonging to the command's
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     projectid - list firewall rules by project
      *     startdate - the start date range of the list you want to retrieve (use
      *        format "yyyy-MM-dd" or the new format "yyyy-MM-dd HH:mm:ss")
@@ -5539,7 +5537,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listEvents', $args);
     }
-    
+
 
     /**
      * List Event Types
@@ -5551,7 +5549,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listEventTypes', $args);
     }
-    
+
 
     /**
      * Retrieves the current status of asynchronous job.
@@ -5566,7 +5564,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('queryAsyncJobResult', $args);
     }
-    
+
 
     /**
      * Lists all pending asynchronous jobs for the account.
@@ -5581,8 +5579,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     listall - If set to false, list only resources belonging to the command's
      *        caller; if set to true - list resources that the caller is authorized to see.
      *        Default value is false
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     startdate - the start date of the async job
      *     page - Pagination
      */
@@ -5590,7 +5588,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listAsyncJobs', $args);
     }
-    
+
 
     /**
      * Lists all the system wide capacities.
@@ -5599,8 +5597,8 @@ class CloudStackClient extends BaseCloudStackClient {
      *     clusterid - lists capacity by the Cluster ID
      *     fetchlatest - recalculate capacities and fetch the latest
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     podid - lists capacity by the Pod ID
      *     sortby - Sort the results. Available values: Usage
      *     type - lists capacity by type* CAPACITY_TYPE_MEMORY = 0* CAPACITY_TYPE_CPU =
@@ -5615,7 +5613,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listCapacity', $args);
     }
-    
+
 
     /**
      * Register a public key in a keypair under a certain name
@@ -5638,7 +5636,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('registerSSHKeyPair', $args);
     }
-    
+
 
     /**
      * Logs out the user
@@ -5649,7 +5647,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('logout', $args);
     }
-    
+
 
     /**
      * Logs a user into the CloudStack. A successful login attempt will generate a
@@ -5677,7 +5675,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('login', $args);
     }
-    
+
 
     /**
      * Configure the LDAP context for this site.
@@ -5710,7 +5708,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('ldapConfig', $args);
     }
-    
+
 
     /**
      * Retrieves a cloud identifier.
@@ -5725,7 +5723,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('getCloudIdentifier', $args);
     }
-    
+
 
     /**
      * Uploads custom certificate
@@ -5747,7 +5745,7 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('uploadCustomCertificate', $args);
     }
-    
+
 
     /**
      * Lists all alerts.
@@ -5755,8 +5753,8 @@ class CloudStackClient extends BaseCloudStackClient {
      * @param array $args An associative array. The following are options for keys:
      *     id - the ID of the alert
      *     keyword - List by keyword
-     *     page - 
-     *     pagesize - 
+     *     page -
+     *     pagesize -
      *     type - list by alert type
      *     page - Pagination
      */
@@ -5764,6 +5762,6 @@ class CloudStackClient extends BaseCloudStackClient {
 
         return $this->request('listAlerts', $args);
     }
-    
+
 
 }
